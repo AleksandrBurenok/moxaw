@@ -1,0 +1,57 @@
+.holder {
+  background: url("./images/photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  .menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+}
+
+.header .menu li {
+  margin: 0 10px;
+}
+
+.header .menu li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  &:hover {
+    color: #61dafb;
+  }
+}
+
+.Advantage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .menu {
+    flex-direction: column;
+    display: none;
+  }
+}
