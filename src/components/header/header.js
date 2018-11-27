@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import style from '../../style.scss'
+import style from '../../style.css'
 import logo from '../../images/waxom.png'
 
 class Header extends Component {
@@ -7,22 +7,39 @@ class Header extends Component {
         return (
             <header className={style.header}>
                 <div>
-                    <a href={'/'}><img src={logo} alt="Waxom" /></a>
+                    <a className={style.logo} href={'/'}><img src={logo} alt="Waxom" /></a>
                 </div>
-                <nav>
-                    <ul className={style.menu}>
-                        <li><a href={' '}>Home</a></li>
-                        <li><a href={' '}>About Us</a></li>
-                        <li><a href={' '}>Portfolio</a></li>
-                        <li><a href={' '}>Features</a></li>
-                        <li><a href={' '}>Blog</a></li>
-                        <li><a href={' '}>Pricing</a></li>
-                        <li><a href={' '}>Shortcodes</a></li>
-                        <li><a href={' '}>Contact</a></li>
-                    </ul>
-                </nav>
+                <Menu />
             </header>
         )
+    }
+}
+
+class Menu extends Component {
+    render () {
+        let menus = [
+            'Home',
+            'About Us',
+            'Portfolio',
+            'Features',
+            'Blog',
+            'Contact'
+        ];
+        return <nav>
+            <ul className={style.menu}>
+                {menus.map((value, index) => {
+                    return <li key={index}><Link label={value} /></li>
+                })}
+            </ul>
+        </nav>
+
+    }
+}
+
+class Link extends Component {
+    render() {
+        const url = "/" + this.props.label.toLowerCase().trim().replace(" ", "-");
+        return <a href={url}>{this.props.label}</a>
     }
 }
 

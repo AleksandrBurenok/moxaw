@@ -4,44 +4,36 @@
   background-size: cover;
   background-position: center center;
   height: 100vh;
-  width: 100%;
-}
+  width: 100%; }
 
 .wrapper {
   width: 100%;
   max-width: 65%;
   margin: 0 auto;
-  padding: 0 15px;
-}
+  padding: 0 15px; }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  .menu {
+  padding: 20px 0; }
+  .header .menu {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    li {
-      margin-right: 15px;
-      &:last-child {
-        margin: 0;
-      }
-      a {
+    margin: 0; }
+    .header .menu li {
+      margin-right: 15px; }
+      .header .menu li:last-child {
+        margin: 0; }
+      .header .menu li a {
         text-transform: uppercase;
         text-decoration: none;
         color: #ffffff;
-        font-size: 14px;
-        &:hover {
+        font-size: 14px; }
+        .header .menu li a:hover {
           color: burlywood;
-          transition: color 300ms ease-in-out;
-        }
-      }
-    }
-  }
-}
+          transition: color 300ms ease-in-out; }
 
 .MenuToggle {
   display: none;
@@ -52,14 +44,11 @@
   cursor: pointer;
   color: #ffffff;
   transition: opacity, left .22s ease-in;
-  z-index: 100;
-  &:hover {
-    opacity: .7;
-  }
-  .open {
-    top: 320px;
-  }
-}
+  z-index: 100; }
+  .MenuToggle:hover {
+    opacity: .7; }
+  .MenuToggle .open {
+    top: 320px; }
 
 .headerTextWrapper {
   display: flex;
@@ -68,49 +57,41 @@
   width: 100%;
   max-width: 65%;
   margin: 0 auto;
-  padding: 0 15px;
-}
+  padding: 0 15px; }
 
 .headerText {
   text-align: center;
   width: 100%;
   max-width: 45%;
   margin: auto;
-  color: #fff;
-}
+  color: #fff; }
 
 .Advantage {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  text-align: center;
-}
+  text-align: center; }
 
 @media screen and (max-width: 1200px) {
   .wrapper {
-    max-width: 85%;
-  }
-}
-
+    max-width: 85%; } }
 @media screen and (max-width: 768px) {
   .header {
-    flex-direction: column;
-    .logo {
+    flex-direction: column; }
+    .header .logo {
       display: flex;
-      justify-content: center;
-    }
-    .menu {
+      justify-content: center; }
+    .header .menu {
       flex-direction: column;
-      display: none;
-    }
-  }
+      display: none; }
+
   .MenuToggle {
-    display: block;
-  }
+    display: block; }
+
   .headerText {
-    max-width: 100%;
-  }
+    max-width: 100%; }
+
   .Advantage {
-    flex-direction: column;
-  }
-}
+    flex-direction: column; } }
+
+/*# sourceMappingURL=style.css.map */

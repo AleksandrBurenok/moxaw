@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import style from '../../style.scss'
+import style from '../../style.css'
 
 export default class Advantage extends Component {
     render() {
