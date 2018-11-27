@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import style from '../../style.css'
+import style from '../../style.scss'
+import logo from '../../images/waxom.png'
 
 class Header extends Component {
     render() {
         return (
             <header className={style.header}>
                 <div>
-                    <a href={' '}>Logo</a>
+                    <a href={'/'}><img src={logo} alt="Waxom" /></a>
                 </div>
                 <nav>
                     <ul className={style.menu}>
